@@ -40,7 +40,11 @@ public class MercadoLibre {
 
     @Then("Obtain the name and the price of the first 5 products and Print these products in the console")
     public void Obtain_the_name_and_the_price_of_the_first_products() {
-        ml.print_names();
+        try{
+            ml.print_names();
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
 

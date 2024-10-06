@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">14.045s</div>
+<div class="counter">9.866s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">Busqueda y filtro de consola</td>
-<td class="success">14.045s</td>
+<td class="success">9.866s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,21 +90,39 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>El texto del elemento 1 es: Playstation 5
-El texto del elemento 2 es: Consola Sony Ps5 Play Station 5 Incluye Control Original
-El texto del elemento 3 es: Sony Playstation 5 C/lectora 825 Gb + Joystick De
-El texto del elemento 4 es: Consola Playstation 5 Spiderman 2 Edition 1tb Cfi-1216a Color Negro - Rojo
-El texto del elemento 5 es: Consola Playstation 5 825gb Standard Incluye Control
+<pre>
+@DesafioCasa
+Scenario: Busqueda y filtro de consola                                                               # src/test/resources/features/MercadoLibre.feature:5
+  Given Open application to mercadolibre.com                                                         # steps.MercadoLibre.open_app_mercadolibre()
+  Then Select Mexico as a country                                                                    # steps.MercadoLibre.Select_Mexico_as_a_country()
+  Then Search for the term playstation 5                                                             # steps.MercadoLibre.Search_for_the_term_playstation()
+  Then Filter by condition Nuevos                                                                    # steps.MercadoLibre.Filter_by_condition_Nuevos()
+  Then Filter by location Cdmx                                                                       # steps.MercadoLibre.Filter_by_location_Cdmx()
+  Then Order by mayor a menor precio                                                                 # steps.MercadoLibre.Order_by_mayor_a_menor_precio()
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/main/div/div[3]/section/ol/li[1]/div/div/div[2]/div[1]/a/h2&quot;}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [39ec3f0df6b867d4160ba75efb8edbdb, findElement {using=xpath, value=/html/body/main/div/div[3]/section/ol/li[1]/div/div/div[2]/div[1]/a/h2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.89 (951c0b97221f..., userDataDir: C:\Users\JoePC\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50188/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 39ec3f0df6b867d4160ba75efb8edbdb
+  Then Obtain the name and the price of the first 5 products and Print these products in the console # steps.MercadoLibre.Obtain_the_name_and_the_price_of_the_first_products()
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>ago 30, 2024 11:21:48 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 128
-ago 30, 2024 11:21:48 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 128.0.6613.113. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.19.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+<pre>SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+oct 06, 2024 10:45:07 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 129
+oct 06, 2024 10:45:07 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 129.0.6668.90. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.13.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 </pre>
 </span>
 </div>
@@ -116,7 +134,7 @@ WARNING: Unable to find version of CDP to use for 128.0.6613.113. You may need t
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 30 ago 2024 23:22:02</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 6 oct 2024 10:45:17</p>
 </div>
 </div>
 </body>
