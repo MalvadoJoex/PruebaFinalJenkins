@@ -1,5 +1,5 @@
 Feature: Desafio para casa MercaadoLibre
- 
+ //.feature
 
     @DesafioCasa
     Scenario: Busqueda y filtro de consola

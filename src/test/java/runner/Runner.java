@@ -14,7 +14,7 @@ import pages.BasePage;
           "pretty", 
           "json:target/cucumber/report.json"},
     monochrome = true,
-    tags = ("@DesafioCasa")
+    tags = ("") //@DesafioCasa
     )
   
 public class Runner {
